@@ -5,8 +5,9 @@ require 'clockwork'
 include Clockwork
 
 handler do |job|
-  puts "Called #{job}"
+  puts `ls -la`
+  puts `pwd`
 end
 
-every(10.seconds, 'frequent.job')
+every(30.seconds, 'frequent.job')
 
