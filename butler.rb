@@ -5,9 +5,8 @@ require 'clockwork'
 include Clockwork
 
 handler do |job|
-  puts `ls -la`
-  puts `pwd`
+  puts `curl -X GET http://sexy-commandoo.herokuapp.com/`
 end
 
-every(30.seconds, 'frequent.job')
+every(60.seconds, 'frequent.job')
 
