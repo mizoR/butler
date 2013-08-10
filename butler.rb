@@ -6,7 +6,8 @@ include Clockwork
 
 handler do |job|
   puts `curl -X GET http://sexy-commandoo.herokuapp.com/`
+  puts `curl -X GET http://h2m.herokuapp.com/`
 end
 
-every(60.seconds, 'frequent.job')
+every(300.seconds, 'frequent.job')
 
